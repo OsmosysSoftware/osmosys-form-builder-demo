@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="topbar-container">
+  <h3>Preview Form</h3>
+  <div class="form-group">
+    <select id="configSelection" class="form-control" (change)="onConfigChange($event)">
+      <option value="">{{ 'Select a form config' }}</option>
+      <option *ngFor="let item of configItems"
+              [value]="item.value"
+              [selected]="item.label === 'Select a form config'">{{ item.label }}</option>
+    </select>
+  </div>
+</div>
+<div class="col-12">
+  <osmosys-form *ngIf="showPreview"
+                [formJsonData]="previewData"
+                [modelData]="formData"
+                (formSubmit)="onFormSubmit($event)"
+                (buttonAction)="onButtonAction($event.action, $event.form)">
+  </osmosys-form>
+</div>
