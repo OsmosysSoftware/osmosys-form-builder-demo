@@ -15,17 +15,16 @@ import { configs } from '../../../assets/config';
 })
 export class ViewformComponent implements OnInit {
   configItems = [
-    { label: 'Simple Form', value: 'Simple Form' },
-    { label: 'addBatches', value: 'addBatches' },
-    { label: 'addExamCreation', value: 'addExamCreation' },
-    { label: 'addQuestion', value: 'addQuestion' },
-    { label: 'addQuestionPaper', value: 'addQuestionPaper' },
-    { label: 'addSection', value: 'addSection' },
-    { label: 'addService', value: 'addService' },
-    { label: 'addSubSection', value: 'addSubSection' }
+    { label: 'Add Batch', value: 'addBatches' },
+    { label: 'Exam Creation', value: 'addExamCreation' },
+    { label: 'Add Question', value: 'addQuestion' },
+    { label: 'Add Question Paper', value: 'addQuestionPaper' },
+    { label: 'Add Section', value: 'addSection' },
+    { label: 'Add Service', value: 'addService' },
+    { label: 'Add SubSection', value: 'addSubSection' }
   ];
 
-  previewData: any = configs.simpleForm;
+  previewData: any = configs.addBatches;
 
   showPreview = true;
 
